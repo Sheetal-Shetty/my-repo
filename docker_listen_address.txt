@@ -1,0 +1,10 @@
+#### To make docker list on ip address####
+
+edit the file: /lib/systemd/system/docker.service 
+
+add the line: ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375
+
+sudo systemctl daemo-reload
+sudo systemctl daemon-reexec
+
+sudo systemctl restart docker
