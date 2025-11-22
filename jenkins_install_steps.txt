@@ -1,0 +1,28 @@
+### Install JAVA#####
+
+sudo apt install openjdk-17-jdk
+
+### Add Jenkins Repository to apt#####
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+
+sudo apt-get install jenkins
+
+
+sudo systemctl start jenkins
+
+
+sudo cat  /var/lib/jenkins/secrets/initialAdminPassword
+
+Go to browser http://localhost:8080 or http://<ip adress>:8080
+
+Submit Password
+
+Install Suggested Plugins
+
+
+Set Username: jenkins
+
+Password: jenkins@123
